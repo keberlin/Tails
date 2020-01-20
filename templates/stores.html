@@ -1,0 +1,19 @@
+<html>
+<body>
+A full list of stores in alphabetical order:
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Latitude</td>
+        <td>Longitude</td>
+    </tr>
+    {% for store in stores %}
+        <tr>
+            <td>{{store.name}}</td>
+            <td>{{store.latitude}}</td>
+            <td>{{store.longitude}}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

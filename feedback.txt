@@ -1,0 +1,45 @@
+Application:
+
+- The application has been written as a standar Flask app with local IP address: http://127.0.0.1:81
+
+- http://127.0.0.1:81/stores will bring up the alphabetical list of stores
+
+
+Python requirements:
+
+- The application depends on both the 'requests' and 'Flask' pip install packages
+
+
+Engine/Backend:
+
+- The postcode 'GU19 5DG' (Bagshot) cannot be found using postcodes.io!
+
+- Could use Google api for postcode to lat/long lookup as an alternative
+
+- Within a commercial implementation the stores data would probably be stored inside a database (Postgres for eg)
+
+
+Rendered/UI:
+
+- Just a simple html structure has been included for the Jinja rendering part, no styling for eg!
+
+
+Testing:
+
+- I've added a strightforward pytest to test for the basics of the task including that the 'within distance of a postcode' function works too
+
+- I've used my home postcode so that the 'within a distance around a postcode' makes more sense to me
+
+
+
+* Tell us what test you completed (backend or full-stack)
+- Backend testing using pytest
+
+* Tell us what you'd have changed if you'd have had more time?
+- Would prefer for the stores information to be held within a Postgres database
+
+* What bits did you find the toughest? What bit are you most proud of? In both cases, why?
+- The 'within distnce of a postcode' function needed a little bit of Pythagoras for its logic.
+
+* What's one thing we could do to improve this test?
+- The postcode 'GU19 5DG' is not returning a location from the postcodes.io api. Maybe you could check why this is happening?
