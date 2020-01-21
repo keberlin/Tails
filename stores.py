@@ -43,13 +43,13 @@ class Stores:
         location = self._postcode_to_location(postcode)
         results = []
         for store in self.stores:
-            if not ('eastings' in store and 'northings' in store):
+            if not ("eastings" in store and "northings" in store):
                 continue
-            dx = abs(store['eastings']-location["eastings"])
-            dy = abs(store['northings']-location["northings"])
-            d = math.sqrt(dx*dx+dy*dy)
-            if (d <= distance):
+            dx = abs(store["eastings"] - location["eastings"])
+            dy = abs(store["northings"] - location["northings"])
+            d = math.sqrt(dx * dx + dy * dy)
+            if d <= distance:
                 results.append(store)
         # Return the results in northings descending order
-        results = sorted(results, key=lambda x:x['northings'], reverse=True)
+        results.sort(key=lambda x: x["northings"], reverse=True)
         return results

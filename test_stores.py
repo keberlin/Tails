@@ -1,6 +1,7 @@
 import unittest
 import stores
 
+
 class TestStores(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -18,14 +19,14 @@ class TestStores(unittest.TestCase):
         # Ensure we still have 95 stores
         self.assertEqual(len(stores), 95)
         # Check that the first and last names match watch we expect
-        self.assertEqual(stores[0]['name'],'Alton')
-        self.assertEqual(stores[-1]['name'],'Worthing')
+        self.assertEqual(stores[0]["name"], "Alton")
+        self.assertEqual(stores[-1]["name"], "Worthing")
 
     def test_stores_near_postcode(self):
         # Check for stores 30km around Ashford
-        stores = self.harness.stores_around_postcode('TN24 8LF',30000)
+        stores = self.harness.stores_around_postcode("TN24 8LF", 30000)
         # Ensure we still have 6 stores
         self.assertEqual(len(stores), 6)
         # Check that the first and last names match watch we expect
-        self.assertEqual(stores[0]['name'],'Sittingbourne')
-        self.assertEqual(stores[-1]['name'],'Folkestone')
+        self.assertEqual(stores[0]["name"], "Sittingbourne")
+        self.assertEqual(stores[-1]["name"], "Folkestone")

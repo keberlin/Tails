@@ -1,11 +1,13 @@
 Application:
 
-- The application has been written as a standar Flask app with local IP address: http://127.0.0.1:81
+- The application has been written as a standard Flask app with local IP address: http://127.0.0.1:81
+
+- To run the application use: python app.py
 
 - http://127.0.0.1:81/stores will bring up the alphabetical list of stores
 
 
-Python requirements:
+Python requirements(.txt):
 
 - The application depends on both the 'requests' and 'Flask' pip install packages
 
@@ -26,7 +28,8 @@ Rendered/UI:
 
 Testing:
 
-- I've added a strightforward pytest to test for the basics of the task including that the 'within distance of a postcode' function works too
+- I've added a strightforward pytest to test for the basics of the task including that the 'within distance of a postcode'
+  function works too
 
 - I've used my home postcode so that the 'within a distance around a postcode' makes more sense to me
 
@@ -39,7 +42,8 @@ Testing:
 - Would prefer for the stores information to be held within a Postgres database
 
 * What bits did you find the toughest? What bit are you most proud of? In both cases, why?
-- The 'within distnce of a postcode' function needed a little bit of Pythagoras for its logic.
+- The 'within distance of a postcode' function needed a little bit of Pythagoras for its logic.
 
 * What's one thing we could do to improve this test?
 - The postcode 'GU19 5DG' is not returning a location from the postcodes.io api. Maybe you could check why this is happening?
+  Google understands it via Google Maps.
